@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMINO Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Desktop -->
+    <header class="header-desktop">
+        <div class="logo"><img src="./assets/icons/Logo.svg" alt="Umino Logo"></div>
+        <nav class="nav-links">
+            <a href="#">Home<i class="fas fa-angle-down small text-muted"></i></a>
+            <a href="#">Shop<i class="fas fa-angle-down small text-muted"></i></a>
+            <a href="#">Products<i class="fas fa-angle-down small text-muted"></i></a>
+            <a href="#">Pages<i class="fas fa-angle-down small text-muted"></i></a>
+            <a href="#">Blog<i class="fas fa-angle-down small text-muted"></i></a>
+            <a href="#">Sale</a>
+            <a href="#">Buy Umino!</a>
+        </nav>
+        <div class="header-icons">
+            <a href="#" class="icon icon-search"><img src="./assets/icons/Search.svg" alt="Search Logo"></a>
+            <a href="#" class="icon icon-login"><img src="./assets/icons/Login.svg" alt="Login Logo"></a>
+            <a href="#" class="icon icon-viewed"><img src="./assets/icons/Recently viewed.svg"
+                    alt="Recently viewed Logo"></a>
+            <a href="#" class="icon icon-wish"><img src="./assets/icons/Wishlist.svg" alt="Wishlist Logo"></a>
+            <a href="#" class="icon icon-cart"><img src="./assets/icons/Cart.svg" alt="Cart Logo"></a>
+        </div>
+    </header>
+
+    <!-- Header Mobile -->
+    <header class="header-mobile d-flex d-md-none justify-content-between">
+        <a href="#" class="text-dark"><i class="fas fa-bars fa-lg"></i></a>
+        <div class="logo">UMINO</div>
+        <div class="header-icons d-flex">
+            <a href="#" class="icon"><i class="fas fa-search"></i></a>
+            <a href="#" class="icon ms-3"><i class="fas fa-shopping-bag"></i><span class="badge-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Hero Banners -->
+    <section class="container">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="banner-card">
+                    <img src="./assets/images/Sleeveless Dress.png" alt="Sleeveless Dress">
+                    <div class="banner-content">
+                        <div class="subtitle">Inspired by Play</div>
+                        <h3>Sleeveless Dress</h3>
+                        <a href="#" class="btn-white">Shop Save</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="banner-card">
+                    <img src="./assets/images/Boys Comfy Styles.png" alt="Boys Comfy Styles">
+                    <div class="banner-content">
+                        <div class="subtitle">BUY 1 GET 1 - HOLIDAY SALE!</div>
+                        <h3>Boys Comfy Styles</h3>
+                        <a href="#" class="btn-white">Shop Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Announcement -->
+    <section class="marquee-bar">
+        <div class="marquee-content">
+            <img src="./assets/icons/Flower.svg">Great-free returns product within 10 days
+            <img src="./assets/icons/Flower.svg">Subscribe and get 10% off your first purchase
+            <img src="./assets/icons/Flower.svg">Great-free returns product within 10 days
+            <img src="./assets/icons/Flower.svg">Subscribe and get 10% off your first purchase
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="container featured-collections">
+        <div class="sec-title">
+            <h2>Featured Collections</h2>
+            <p>Elevate your style with our chic featured collection — where fashion meets flair effortlessly.</p>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-item bento-clothing">
+                <img src="./assets/images/Clothing.png" alt="Clothing">
+                <span class="bento-label">Clothing</span>
+            </div>
+            <div class="bento-item bento-sunglasses">
+                <img src="./assets/images/Sunglasses.png" alt="Sunglasses">
+                <span class="bento-label">Sunglasses</span>
+            </div>
+            <div class="bento-item bento-bags">
+                <img src="./assets/images/Bags.png" alt="Bags">
+                <span class="bento-label">Bags</span>
+            </div>
+            <div class="bento-item bento-sneaker">
+                <img src="./assets/images/Sneaker.png" alt="Sneaker">
+                <span class="bento-label">Sneaker</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="container">
+        <div class="new-arrivals">
+            <div class="sec-title">
+                <h2>New Arrivals</h2>
+                <p>Here's some of our most popular products people are in love with.</p>
+            </div>
+
+            <div class="d-flex justify-content-center d-md-none mb-4 gap-2">
+                <button
+                    class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;"><i class="fas fa-chevron-left fa-sm"></i></button>
+                <button
+                    class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 38px; height: 38px;"><i class="fas fa-chevron-right fa-sm"></i></button>
+            </div>
+
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-6 col-md-3">
+                    <div class="product-card">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Square Textured Striped(1).png" alt="Product 1">
+                            <div class="badges">
+                                <span class="badge sale">-30%</span>
+                                <span class="badge pre">Pre-Order</span>
+                            </div>
+                            <div class="hover-actions">
+                                <div class="action-btn"><i class="far fa-heart"></i></div>
+                                <div class="action-btn"><i class="far fa-eye"></i></div>
+                                <div class="action-btn"><i class="fas fa-random"></i></div>
+                                <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                            </div>
+                            <div class="hot-sale-bar d-md-none">SAVE 30% OFF <i
+                                    class="fas fa-bolt text-warning mx-1"></i>
+                                HOT SALE 12H</div>
+                        </div>
+                        <div class="product-title">Square Textured Striped T-shirt</div>
+                        <div class="product-stars text-dark">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="text-danger">$180.00</span> <del>$220.00</del>
+                        </div>
+                        <div class="color-swatches">
+                            <div class="swatch active" style="background:#113b29;"></div>
+                            <div class="swatch" style="background:#3b2416;"></div>
+                            <div class="swatch" style="background:#ddd1c5;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-6 col-md-3">
+                    <div class="product-card">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Square Textured Striped(2).png" alt="Product 2">
+                            <div class="hover-actions">
+                                <div class="action-btn"><i class="far fa-heart"></i></div>
+                                <div class="action-btn"><i class="far fa-eye"></i></div>
+                                <div class="action-btn"><i class="fas fa-random"></i></div>
+                                <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                            </div>
+                        </div>
+                        <div class="product-title">Square Textured Striped T-shirt</div>
+                        <div class="product-stars text-dark">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$180.00</div>
+                        <div class="color-swatches">
+                            <div class="swatch active" style="background:#113b29;"></div>
+                            <div class="swatch" style="background:#222;"></div>
+                            <div class="swatch" style="background:#ddd1c5;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-6 col-md-3">
+                    <div class="product-card">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Square Textured Striped(3).png" alt="Product 3">
+                            <div class="badges">
+                                <span class="badge sale">-10%</span>
+                            </div>
+                            <div class="hover-actions">
+                                <div class="action-btn"><i class="far fa-heart"></i></div>
+                                <div class="action-btn"><i class="far fa-eye"></i></div>
+                                <div class="action-btn"><i class="fas fa-random"></i></div>
+                                <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                            </div>
+                        </div>
+                        <div class="product-title">Square Textured Striped T-shirt</div>
+                        <div class="product-stars text-dark">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="text-danger">$180.00</span> <del>$200.00</del>
+                        </div>
+                        <div class="color-swatches">
+                            <div class="swatch active" style="background:#315182;"></div>
+                            <div class="swatch" style="background:#e4b3b3;"></div>
+                            <div class="swatch" style="background:#d9d9d9;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-6 col-md-3">
+                    <div class="product-card">
+                        <div class="img-wrap">
+                            <img src="./assets/images/Square Textured Striped(4).png" alt="Product 4">
+                            <div class="hover-actions">
+                                <div class="action-btn"><i class="far fa-heart"></i></div>
+                                <div class="action-btn"><i class="far fa-eye"></i></div>
+                                <div class="action-btn"><i class="fas fa-random"></i></div>
+                                <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                            </div>
+                        </div>
+                        <div class="product-title">Square Textured Striped T-shirt</div>
+                        <div class="product-stars text-dark">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">$180.00</div>
+                        <div class="color-swatches">
+                            <div class="swatch active" style="background:#113b29;"></div>
+                            <div class="swatch" style="background:#3b2416;"></div>
+                            <div class="swatch" style="background:#ddd1c5;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="row">
+            <!-- Brand Column -->
+            <div class="col-md-3 mb-4 mb-md-0 pe-md-4">
+                <div class="logo fs-3 "><img src="./assets/icons/Logo.svg" alt="Umino Logo" class="header-logo">
+                </div>
+                <p>268 St, South New York/NY 98944, United States<br>+222-1800-2628<br>blueskytechcompany@gmail.com</p>
+                <div class="social-icons mb-4">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="d-flex align-items-center">
+                    <span
+                        class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle me-2"
+                        style="width:24px;height:24px;"><img src="./assets/icons/Follow.svg" alt="Shopify Logo"></span>
+                    <span class="text-dark" style="font-size:12px;">Follow on <strong class="fs-6">shop</strong></span>
+                </div>
+            </div>
+
+            <!-- Hot Categories -->
+            <div class="col-md-3 footer-accordion">
+                <details class="d-md-none" open>
+                    <summary class="footer-title d-flex justify-content-between align-items-center">HOT CATEGORIES <i
+                            class="fas fa-plus icon-plus"></i><i class="fas fa-minus icon-minus"></i></summary>
+                    <ul class="footer-links mt-3">
+                        <li><a href="#">Special Offers</a></li>
+                        <li><a href="#">Performance</a></li>
+                        <li><a href="#">T-shirts</a></li>
+                        <li><a href="#">Underwear</a></li>
+                        <li><a href="#">Top Brands</a></li>
+                        <li><a href="#">Online Exclusive</a></li>
+                    </ul>
+                </details>
+                <div class="d-none d-md-block">
+                    <div class="footer-title">HOT CATEGORIES</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Special Offers</a></li>
+                        <li><a href="#">Performance</a></li>
+                        <li><a href="#">T-shirts</a></li>
+                        <li><a href="#">Underwear</a></li>
+                        <li><a href="#">Top Brands</a></li>
+                        <li><a href="#">Online Exclusive</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Customer Service -->
+            <div class="col-md-3 footer-accordion">
+                <details class="d-md-none">
+                    <summary class="footer-title d-flex justify-content-between align-items-center">CUSTOMER SERVICE <i
+                            class="fas fa-plus icon-plus"></i><i class="fas fa-minus icon-minus"></i></summary>
+                    <ul class="footer-links mt-3">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Shipping & Return</a></li>
+                        <li><a href="#">Term & Conditions</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Theme FAQs</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </details>
+                <div class="d-none d-md-block">
+                    <div class="footer-title">CUSTOMER SERVICE</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Shipping & Return</a></li>
+                        <li><a href="#">Term & Conditions</a></li>
+                        <li><a href="#">Advanced Search</a></li>
+                        <li><a href="#">Theme FAQs</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-3 footer-accordion">
+                <details class="d-md-none">
+                    <summary class="footer-title d-flex justify-content-between align-items-center">SIGN UP TO
+                        NEWSLETTER <i class="fas fa-plus icon-plus"></i><i class="fas fa-minus icon-minus"></i>
+                    </summary>
+                    <div class="mt-3">
+                        <p>Enter your email address to get $10 off your first order and free shipping. Updates
+                            information on Sales and Offers.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email...">
+                            <button type="submit" class="btn-black">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </details>
+                <div class="d-none d-md-block">
+                    <div class="footer-title">SIGN UP TO NEWSLETTER</div>
+                    <p>Enter your email address to get $10 off your first order and free shipping. Updates information
+                        on Sales and Offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email...">
+                        <button type="submit" class="btn-black">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="d-flex gap-3 justify-content-center">
+                <div class="dropdown">
+                    <span class="dropdown-toggle text-dark fw-medium" style="cursor:pointer">English</span>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown-toggle text-dark fw-medium" style="cursor:pointer">United States (USD
+                        $)</span>
+                </div>
+            </div>
+            <div class="text-center">© 2023 Umino Store. All Rights Reserved.</div>
+            <div class="d-flex gap-2 justify-content-center">
+                <img src="./assets/icons/Visa.svg" alt="Visa">
+                <img src="./assets/icons/Mastercard.svg" alt="Mastercard">
+                <img src="./assets/icons/Discover.svg" alt="Discover">
+                <img src="./assets/icons/WesternUnion.svg" alt="Western Union">
+                <img src="./assets/icons/Amex.svg" alt="Amex">
+                <img src="./assets/icons/Discover.svg" alt="Discover">
+                <img src="./assets/icons/Paypal.svg" alt="Paypal">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-nav d-md-none">
+        <a href="#" class="m-nav-item active">
+            <i class="fas fa-home text-dark"></i>
+            Home
+        </a>
+        <a href="#" class="m-nav-item">
+            <i class="fas fa-list text-dark"></i>
+            Shop
+        </a>
+        <a href="#" class="m-nav-item">
+            <i class="far fa-user text-dark"></i>
+            Account
+        </a>
+        <a href="#" class="m-nav-item">
+            <i class="far fa-heart text-dark"></i>
+            <span class="m-badge">2</span>
+            Wishlist
+        </a>
+        <a href="#" class="m-nav-item">
+            <i class="fas fa-shopping-bag text-dark"></i>
+            <span class="m-badge">3</span>
+            Cart
+        </a>
+    </div>
+
+</body>
+
+</html>

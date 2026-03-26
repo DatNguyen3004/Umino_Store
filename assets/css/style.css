@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #222;
+    overflow-x: hidden;
+    width: 1920;
+    height: 3063;
+    top: 70px;
+    opacity: 1;
+    gap: 100px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin-left: 247px;
+    /* Khớp Left: 255px của layout bên trái */
+    margin-right: 213px;
+}
+
+/* Header */
+.header-desktop {
+    width: 1920px;
+    height: 74px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Xóa padding mặc định của Bootstrap để soi số cho chuẩn */
+    position: relative;
+    /* Nếu màn hình bạn nhỏ hơn 1920, dòng này giúp căn giữa cái header khổng lồ này */
+    margin: 0 auto;
+}
+
+.header-desktop .logo {
+    width: 92px;
+    height: 23px;
+    display: block;
+}
+
+.nav-links {
+    position: absolute;
+    top: 28px;
+    left: 656px;
+    display: flex;
+    gap: 30px;
+    height: 23px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    font-size: 15px;
+    /* Bạn check lại size chữ trong Figma nhé */
+    color: #111111;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    /* Thêm flex để chữ và mũi tên nằm thẳng hàng */
+    align-items: center;
+    gap: 5px;
+}
+
+.header-icons {
+    position: absolute;
+    top: 25px;
+    /* Lấy theo top của icon cao nhất là Wishlist/Cart */
+    left: 1702px;
+    width: 200px;
+    /* Cho nó một cái width đủ rộng để chứa các icon con */
+    height: 30px;
+}
+
+.header-icons .icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+/* Tọa độ chi tiết từng icon (Left tính lại dựa trên mốc 1708px) */
+.icon-search {
+    left: 0px;
+    top: 6px;
+}
+
+/* 27px - 21px = 6px */
+.icon-login {
+    left: 37px;
+    top: 6px;
+}
+
+/* 1745px - 1708px = 37px */
+.icon-viewed {
+    left: 74px;
+    top: 6px;
+}
+
+/* 1782px - 1708px = 74px */
+.icon-wish {
+    left: 111px;
+    top: 0px;
+}
+
+/* 1819px - 1708px = 111px */
+.icon-cart {
+    left: 151px;
+    top: 0px;
+}
+
+/* 1859px - 1708px = 151px */
+.header-icons img {
+    display: block;
+    object-fit: contain;
+}
+
+.badge-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: #e85a4f;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-mobile {
+    padding: 15px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+section.container {
+    max-width: 1920px;
+    /* Khớp width tổng */
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    height: 560px;
+    /* Khớp height tổng */
+}
+
+section.container .row {
+    margin-left: 247px;
+    /* Khớp Left: 255px của layout bên trái */
+    margin-right: 213px;
+    --bs-gutter-x: 5px;
+    /* Đây chính là cái Gap: 20px giữa 2 card */
+}
+
+/* Banner */
+.banner-card {
+    position: relative;
+    width: 695px;
+    /* Khớp Width: 695px */
+    height: 560px;
+    /* Khớp Height: 560px */
+    border-radius: 10px;
+    /* Khớp Figma 10px (Code cũ bạn để 12px) */
+    overflow: hidden;
+}
+
+.banner-card img {
+    width: 100%;
+    height: 100%;
+    /* Cho ảnh cao bằng card */
+    object-fit: cover;
+    /* Để ảnh không bị méo */
+}
+
+.banner-content {
+    position: absolute;
+    /* Bạn hãy đo lại trong Figma xem chữ 'Inspired' cách mép dưới bao nhiêu */
+    bottom: 40px;
+    left: 40px;
+    color: white;
+}
+
+.banner-content .subtitle {
+    font-size: 12px;
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.banner-content h3 {
+    font-size: 37px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.btn-white {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    padding: 14.5px 54.5px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.btn-white:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Marquee */
+.marquee-bar {
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Section Titles */
+.sec-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featured-collections .sec-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.new-arrivals {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 200px;
+}
+
+
+
+.sec-title h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.sec-title p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Bento Grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.bento-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.bento-item:hover img {
+    transform: scale(1.05);
+}
+
+.bento-label {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    color: #000;
+    white-space: nowrap;
+}
+
+.bento-clothing {
+    grid-row: 1 / span 2;
+    height: 600px;
+}
+
+.bento-sunglasses {
+    grid-column: 2;
+    grid-row: 1;
+    height: 290px;
+}
+
+.bento-bags {
+    grid-column: 2;
+    grid-row: 2;
+    height: 290px;
+}
+
+.bento-sneaker {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    height: 600px;
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+    }
+
+    .bento-clothing {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        height: 450px;
+    }
+
+    .bento-bags {
+        grid-column: 2;
+        grid-row: 1;
+        height: 215px;
+    }
+
+    .bento-sneaker {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        height: 450px;
+    }
+
+    .bento-sunglasses {
+        grid-column: 1;
+        grid-row: 3;
+        height: 215px;
+    }
+}
+
+/* Products */
+.product-card {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.img-wrap {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    aspect-ratio: 3/4;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 2;
+}
+
+.badge {
+    font-size: 10px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.badge.sale {
+    background: #d9381e;
+}
+
+.badge.pre {
+    background: #008080;
+}
+
+.hover-actions {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.product-card:hover .hover-actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .hover-actions {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #000;
+    font-size: 12px;
+}
+
+.action-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.hot-sale-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    padding: 6px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.product-stars {
+    color: #222;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-price del {
+    color: #999;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.color-swatches {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.swatch.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid #eee;
+    padding: 60px 0 30px;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 5px 5px 5px 20px;
+}
+
+.newsletter-form input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 13px;
+    width: 100%;
+}
+
+.btn-black {
+    background: #000;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.social-icon:hover {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+/* Accordion for mobile footer */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    list-style: none;
+    outline: none;
+    cursor: pointer;
+}
+
+details[open] .icon-plus {
+    display: none;
+}
+
+details:not([open]) .icon-minus {
+    display: none;
+}
+
+.footer-accordion {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 15px 0;
+}
+
+@media (min-width: 768px) {
+    .footer-accordion {
+        border: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding-bottom: 90px;
+    }
+}
+
+/* Mobile Nav */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    z-index: 999;
+    justify-content: space-around;
+}
+
+.m-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: #666;
+    position: relative;
+    font-weight: 500;
+}
+
+.m-nav-item.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.m-nav-item i {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.m-badge {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    background: #e85a4f;
+    color: white;
+    font-size: 9px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
