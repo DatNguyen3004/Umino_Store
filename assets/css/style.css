@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: #222;
-    overflow-x: hidden;
-    width: 1920;
-    height: 3063;
-    top: 70px;
-    opacity: 1;
-    gap: 100px;
-
+    font-family: 'Jost', sans-serif;
 }
 
 a {
@@ -26,11 +18,10 @@ ul {
 
 .container {
     margin-left: 247px;
-    /* Khớp Left: 255px của layout bên trái */
     margin-right: 213px;
 }
 
-/* Header */
+/* Thanh đầu trang */
 .header-desktop {
     width: 1920px;
     height: 74px;
@@ -38,9 +29,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Xóa padding mặc định của Bootstrap để soi số cho chuẩn */
     position: relative;
-    /* Nếu màn hình bạn nhỏ hơn 1920, dòng này giúp căn giữa cái header khổng lồ này */
     margin: 0 auto;
 }
 
@@ -55,7 +44,7 @@ ul {
     top: 28px;
     left: 656px;
     display: flex;
-    gap: 30px;
+    gap: 34px;
     height: 23px;
     align-items: center;
     white-space: nowrap;
@@ -63,23 +52,19 @@ ul {
 
 .nav-links a {
     font-size: 15px;
-    /* Bạn check lại size chữ trong Figma nhé */
     color: #111111;
     font-weight: bold;
-    text-decoration: none;
     display: flex;
-    /* Thêm flex để chữ và mũi tên nằm thẳng hàng */
     align-items: center;
     gap: 5px;
 }
 
+/* icon thuộc thanh đầu trang */
 .header-icons {
     position: absolute;
     top: 25px;
-    /* Lấy theo top của icon cao nhất là Wishlist/Cart */
     left: 1702px;
     width: 200px;
-    /* Cho nó một cái width đủ rộng để chứa các icon con */
     height: 30px;
 }
 
@@ -89,105 +74,103 @@ ul {
     align-items: center;
 }
 
-/* Tọa độ chi tiết từng icon (Left tính lại dựa trên mốc 1708px) */
-.icon-search {
-    left: 0px;
+/* Nhóm icon cùng top: 6px */
+.icon-search,
+.icon-login,
+.icon-viewed {
     top: 6px;
 }
 
-/* 27px - 21px = 6px */
+.icon-search {
+    left: 0;
+}
+
 .icon-login {
     left: 37px;
-    top: 6px;
 }
 
-/* 1745px - 1708px = 37px */
 .icon-viewed {
     left: 74px;
-    top: 6px;
 }
 
-/* 1782px - 1708px = 74px */
+/* Nhóm icon cùng top: 0 */
+.icon-wish,
+.icon-cart {
+    top: 0;
+}
+
 .icon-wish {
     left: 111px;
-    top: 0px;
 }
 
-/* 1819px - 1708px = 111px */
 .icon-cart {
     left: 151px;
-    top: 0px;
 }
 
-/* 1859px - 1708px = 151px */
 .header-icons img {
     display: block;
     object-fit: contain;
 }
 
-.badge-count {
+.badge-count,
+.m-badge {
     position: absolute;
-    top: -5px;
-    right: -8px;
     background: #e85a4f;
     color: white;
-    font-size: 10px;
-    font-weight: 700;
-    width: 15px;
-    height: 15px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.header-mobile {
-    padding: 15px;
-    align-items: center;
-    border-bottom: 1px solid #eee;
+.badge-count {
+    top: -5px;
+    right: -8px;
+    font-size: 10px;
+    font-weight: 700;
+    width: 15px;
+    height: 15px;
 }
+
+.m-badge {
+    top: -5px;
+    right: 5px;
+    font-size: 9px;
+    width: 14px;
+    height: 14px;
+}
+
 
 section.container {
     max-width: 1920px;
-    /* Khớp width tổng */
     margin: 0 auto;
     padding: 0;
     position: relative;
     height: 560px;
-    /* Khớp height tổng */
 }
 
 section.container .row {
     margin-left: 247px;
-    /* Khớp Left: 255px của layout bên trái */
     margin-right: 213px;
     --bs-gutter-x: 5px;
-    /* Đây chính là cái Gap: 20px giữa 2 card */
 }
 
-/* Banner */
 .banner-card {
     position: relative;
     width: 695px;
-    /* Khớp Width: 695px */
     height: 560px;
-    /* Khớp Height: 560px */
     border-radius: 10px;
-    /* Khớp Figma 10px (Code cũ bạn để 12px) */
     overflow: hidden;
 }
 
 .banner-card img {
     width: 100%;
     height: 100%;
-    /* Cho ảnh cao bằng card */
     object-fit: cover;
-    /* Để ảnh không bị méo */
 }
 
 .banner-content {
     position: absolute;
-    /* Bạn hãy đo lại trong Figma xem chữ 'Inspired' cách mép dưới bao nhiêu */
     bottom: 40px;
     left: 40px;
     color: white;
@@ -196,23 +179,23 @@ section.container .row {
 .banner-content .subtitle {
     font-size: 12px;
     text-transform: uppercase;
-    /* letter-spacing: 2px; */
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     font-weight: 600;
 }
 
 .banner-content h3 {
-    font-size: 37px;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
+/* Nút bấm */
 .btn-white {
     display: inline-block;
     background: #fff;
     color: #000;
     font-weight: 600;
-    padding: 14.5px 54.5px;
+    padding: 15px 57px;
     border-radius: 30px;
     font-size: 14px;
 }
@@ -222,70 +205,86 @@ section.container .row {
     color: #fff;
 }
 
-/* Marquee */
+.btn-black {
+    background: #000;
+    color: #fff;
+    height: 45px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Băng chuyền thông báo nổi bật */
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 53px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+.marquee-content img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.9;
+}
+
 .marquee-bar {
-    border-top: 1px solid #eaeaea;
-    border-bottom: 1px solid #eaeaea;
-    padding: 15px 0;
-    overflow: hidden;
-    white-space: nowrap;
     font-size: 12px;
     font-weight: 600;
     color: #000;
-    text-transform: uppercase;
-    margin: 30px 0;
+    margin-top: 48px;
+    letter-spacing: -0.01em;
 }
 
-.marquee-content {
-    display: inline-block;
-    animation: marquee 25s linear infinite;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Section Titles */
+/* Tiêu đề mục */
 .sec-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 125px auto 18px 20px;
+    padding: 0;
+    gap: 25px;
+}
+
+.sec-title h2 {
+    font-size: 44px;
+    height: 30px;
+    letter-spacing: -0.02em;
+}
+
+.sec-title p {
+    font-size: 15.8px;
+    color: #666;
+    line-height: 1.2;
 }
 
 .featured-collections .sec-title {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .new-arrivals {
     text-align: center;
     margin-bottom: 40px;
-    margin-top: 200px;
+    margin-top: 378px;
 }
 
-
-
-.sec-title h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.sec-title p {
-    color: #777;
-    font-size: 14px;
-}
-
-/* Bento Grid */
+/* Bộ sưu tập nổi bật */
 .bento-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 1410px;
+    margin: 0 30px 0 250px;
+    align-items: stretch;
 }
 
 .bento-item {
@@ -298,12 +297,7 @@ section.container .row {
 .bento-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.bento-item:hover img {
-    transform: scale(1.05);
+    object-fit: contain;
 }
 
 .bento-label {
@@ -312,74 +306,61 @@ section.container .row {
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
-    padding: 10px 30px;
+    text-align: center;
+    padding-top: 15px;
     border-radius: 30px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     color: #000;
     white-space: nowrap;
+    margin-bottom: 5px;
+    width: 160px;
+    height: 50px;
+}
+
+.bento-clothing,
+.bento-sneaker {
+    grid-row: 1 / span 2;
+    height: 731px;
 }
 
 .bento-clothing {
-    grid-row: 1 / span 2;
-    height: 600px;
-}
-
-.bento-sunglasses {
-    grid-column: 2;
-    grid-row: 1;
-    height: 290px;
-}
-
-.bento-bags {
-    grid-column: 2;
-    grid-row: 2;
-    height: 290px;
+    grid-column: 1;
 }
 
 .bento-sneaker {
     grid-column: 3;
-    grid-row: 1 / span 2;
-    height: 600px;
 }
 
-@media (max-width: 768px) {
-    .bento-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 15px;
-    }
-
-    .bento-clothing {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-        height: 450px;
-    }
-
-    .bento-bags {
-        grid-column: 2;
-        grid-row: 1;
-        height: 215px;
-    }
-
-    .bento-sneaker {
-        grid-column: 2;
-        grid-row: 2 / span 2;
-        height: 450px;
-    }
-
-    .bento-sunglasses {
-        grid-column: 1;
-        grid-row: 3;
-        height: 215px;
-    }
+/* Nhóm bento cùng grid-column: 2 */
+.bento-sunglasses,
+.bento-bags {
+    grid-column: 2;
 }
 
-/* Products */
+.bento-sunglasses {
+    grid-row: 1;
+    height: 351px;
+}
+
+.bento-bags {
+    grid-row: 2;
+    height: 350px;
+}
+
+/* Thẻ sản phẩm */
+.product-grid-container {
+    max-width: 1410px;
+    margin: 0;
+    padding: 0;
+}
+
 .product-card {
     text-align: left;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 330px;
+    margin: 0;
 }
 
 .img-wrap {
@@ -391,20 +372,34 @@ section.container .row {
     aspect-ratio: 3/4;
 }
 
-.img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Nhóm badges & hover-actions cùng position/flex */
+.badges,
+.hover-actions {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 
 .badges {
-    position: absolute;
     top: 12px;
     left: 12px;
-    display: flex;
-    flex-direction: column;
     gap: 6px;
     z-index: 2;
+}
+
+.hover-actions {
+    top: 12px;
+    right: 12px;
+    gap: 8px;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.product-card:hover .hover-actions {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .badge {
@@ -423,29 +418,12 @@ section.container .row {
     background: #008080;
 }
 
-.hover-actions {
-    position: absolute;
-    top: 12px;
-    right: 12px;
+/* Nhóm action-btn & social-icon cùng flex center */
+.action-btn,
+.social-icon {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    opacity: 0;
-    transform: translateX(15px);
-    transition: all 0.3s ease;
-    z-index: 2;
-}
-
-.product-card:hover .hover-actions {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-@media (max-width: 768px) {
-    .hover-actions {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    align-items: center;
+    justify-content: center;
 }
 
 .action-btn {
@@ -453,9 +431,6 @@ section.container .row {
     height: 32px;
     background: #fff;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     color: #000;
@@ -481,17 +456,21 @@ section.container .row {
     text-transform: uppercase;
 }
 
-.product-title {
-    font-size: 14px;
-    font-weight: 500;
+/* Nhóm product info cùng margin-bottom: 5px */
+.product-title,
+.product-stars {
     margin-bottom: 5px;
+}
+
+.product-title {
+    font-size: 15.5px;
+    font-weight: 500;
     color: #000;
 }
 
 .product-stars {
     color: #222;
     font-size: 10px;
-    margin-bottom: 5px;
 }
 
 .product-price {
@@ -512,8 +491,8 @@ section.container .row {
 }
 
 .swatch {
-    width: 16px;
-    height: 16px;
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
     border: 1px solid #ddd;
     cursor: pointer;
@@ -523,18 +502,42 @@ section.container .row {
     box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000;
 }
 
-/* Footer */
+/* Cuối trang */
 .footer {
     border-top: 1px solid #eee;
-    padding: 60px 0 30px;
-    margin-top: 60px;
+    padding: 86px 0 30px;
+    margin-top: 215px;
     font-size: 14px;
     color: #666;
 }
 
 .footer p {
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin: 18px 30px 0 0;
+    font-size: 16px;
+}
+
+/* Nhóm footer-container & footer-bottom cùng max-width & margin */
+.footer-container,
+.footer-bottom {
+    width: 100%;
+    max-width: 1410px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container {
+    align-items: flex-start;
+}
+
+.footer-bottom {
+    border-top: 1px solid #eee;
+    padding: 80px 0 0 10px;
+    margin: 50px auto 0;
+    gap: 10px;
+    font-size: 13px;
 }
 
 .footer-title {
@@ -554,35 +557,26 @@ section.container .row {
     text-decoration: underline;
 }
 
-.newsletter-form {
-    display: flex;
-    margin-top: 20px;
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    padding: 5px 5px 5px 20px;
-}
-
-.newsletter-form input {
-    border: none;
-    outline: none;
-    flex: 1;
-    font-size: 13px;
-    width: 100%;
-}
-
-.btn-black {
-    background: #000;
-    color: #fff;
-    padding: 10px 25px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 600;
-    border: none;
-}
-
+.newsletter-form,
 .social-icons {
     display: flex;
-    gap: 12px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.input-wrapper {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 5px 20px;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    padding-top: 7px;
 }
 
 .social-icon {
@@ -590,9 +584,6 @@ section.container .row {
     height: 36px;
     border: 1px solid #ddd;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #000;
 }
 
@@ -602,17 +593,10 @@ section.container .row {
     color: #fff;
 }
 
-.footer-bottom {
-    border-top: 1px solid #eee;
-    padding-top: 25px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
+.footer-bottom .d-flex:last-child {
+    justify-content: flex-end !important;
 }
 
-/* Accordion for mobile footer */
 details summary::-webkit-details-marker {
     display: none;
 }
@@ -631,72 +615,23 @@ details:not([open]) .icon-minus {
     display: none;
 }
 
-.footer-accordion {
-    border-bottom: 1px solid #f4f4f4;
-    padding: 15px 0;
+/* Các cột lần lượt ở cuối trang */
+.footer-accordion:nth-child(1) {
+    width: 400px;
+    padding: 0 0 0 10px;
 }
 
-@media (min-width: 768px) {
-    .footer-accordion {
-        border: none;
-        padding: 0;
-    }
+.footer-accordion:nth-child(2) {
+    width: 200px;
+    padding: 18px 0 0 40px;
 }
 
-@media (max-width: 768px) {
-    .footer-bottom {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        padding-bottom: 90px;
-    }
+.footer-accordion:nth-child(3) {
+    width: 200px;
+    padding: 20px 0 0 22px;
 }
 
-/* Mobile Nav */
-.mobile-nav {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.05);
-    padding: 10px 0;
-    z-index: 999;
-    justify-content: space-around;
-}
-
-.m-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 10px;
-    color: #666;
-    position: relative;
-    font-weight: 500;
-}
-
-.m-nav-item.active {
-    color: #000;
-    font-weight: 600;
-}
-
-.m-nav-item i {
-    font-size: 18px;
-    margin-bottom: 4px;
-}
-
-.m-badge {
-    position: absolute;
-    top: -5px;
-    right: 5px;
-    background: #e85a4f;
-    color: white;
-    font-size: 9px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.footer-accordion:nth-child(4) {
+    width: 442px;
+    padding: 18px 0 0 0;
 }
